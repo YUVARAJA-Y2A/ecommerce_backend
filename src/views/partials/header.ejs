@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+        <div
+          class="px-2 d-flex w-100 justify-content-between align-items-center"
+        >
+          <a class="navbar-brand mb-2 mb-lg-0" href="/">
+            <img src="/img/logo.png" height="75px" width="75px" alt="Logo" />
+          </a>
+          <ul class="navbar-nav mb-2 mb-lg-0" id="navbarNavContainer">
+            <li class="nav-item dropdown" id="userDropdownContainer">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="userDropdown"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/cart">Cart</a></li>
+                <li><a class="dropdown-item" href="/orders">Orders</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#" id="logoutLink">
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-outline-primary custom-signin-button"
+            id="signInButton"
+          >
+            Sign In
+          </button>
+        </div>
+      </nav>
+    </header>
+    <script src="/js/header.js"></script>
+  </body>
+</html>

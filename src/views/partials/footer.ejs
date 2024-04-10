@@ -1,0 +1,115 @@
+<footer class="container mt-2">
+  <hr />
+  <p>&copy; 2023 The E-Commerce Store</p>
+</footer>
+<script src="/js/jquery-3.7.1.js"></script>
+<!-- Load jQuery first -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<!-- Then load Popper.js -->
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+
+<!-- Finally, load Bootstrap -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+  crossorigin="anonymous"
+></script>
+
+<!-- Your custom script using jQuery -->
+<!-- <script>
+  $(document).ready(function () {
+    // Fetch product data from the API endpoint
+    fetch("http://localhost:3000/api/v1/product/productList")
+      .then((response) => response.json())
+      .then((data) => {
+        // Display the product list in a Bootstrap-styled table with Add to Cart buttons
+        var productListHtml = "<table class='table'>";
+        productListHtml +=
+          "<thead><tr><th>Item ID</th><th>Item Name</th><th>Price</th><th>Available Stock</th><th>Action</th></tr></thead><tbody>";
+
+        data.data.forEach(function (product) {
+          productListHtml +=
+            "<tr>" +
+            "<td>" +
+            product.item_id +
+            "</td>" +
+            "<td>" +
+            product.item_name +
+            "</td>" +
+            "<td>₹" +
+            product.item_price +
+            "</td>" +
+            "<td>" +
+            product.quantity +
+            "</td>" +
+            "<td><button class='btn btn-primary' onclick='openAddToCartModal(" +
+            JSON.stringify(product) +
+            ")'>Add to Cart</button></td>" +
+            "</tr>";
+        });
+
+        productListHtml += "</tbody></table>";
+
+        $("#productListContainer").html(productListHtml);
+      })
+      .catch((error) => {
+        console.error("Error fetching product data:", error);
+      });
+  });
+
+  function openAddToCartModal(product) {
+    // Set product information in the modal
+    $("#modalItemName")
+      .text("Item: " + product.item_name)
+      .data("product-id", product._id);
+    $("#modalItemPrice").text("Price: ₹" + product.item_price);
+
+    // Clear the quantity input
+    $("#quantityInput").val("");
+
+    // Show the Add to Cart modal
+    $("#addToCartModal").modal("show");
+  }
+
+  function addToCart() {
+    // Get the selected product ID
+    var productId = $("#modalItemName").data("product-id");
+
+    // Get the quantity from the input field
+    var quantity = $("#quantityInput").val();
+
+    // Make an AJAX request to add the product to the cart
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/api/v1/cart/addToCart",
+      contentType: "application/json",
+      data: JSON.stringify({ productId: productId, quantity: quantity }),
+      success: function (response) {
+        // Handle the success response
+        console.log("Product added to cart:", response);
+
+        // Optionally, you can close the modal after successful addition
+        $("#addToCartModal").modal("hide");
+      },
+      error: function (error) {
+        // Handle the error
+        console.error("Error adding product to cart:", error);
+
+        // Optionally, you can display an alert or handle the error in another way
+      },
+    });
+  }
+</script> -->
+
+<script>
+  document
+    .getElementById("signInButton")
+    .addEventListener("click", function () {
+      window.location.href = "/login";
+    });
+</script>
